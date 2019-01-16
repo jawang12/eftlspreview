@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+  font-family: Raleway, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.app-wrapper {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .app-wrapper {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .app-wrapper {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .app-wrapper {
+    width: 1170px;
+  }
+}
+
+.white-text {
+  color: white !important;
+}

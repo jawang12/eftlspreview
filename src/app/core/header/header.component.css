@@ -1,0 +1,84 @@
+mat-icon {
+  font-size: 30px;
+  color: white;
+}
+
+mat-toolbar {
+  height: 75px;
+  padding: 0 6.7em;
+}
+
+:host {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: lightgrey;
+  cursor: pointer;
+}
+
+:host {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.active-link,
+.active-link:active,
+.active-link:focus {
+  color: lightgrey;
+}
+
+/* .nav-list li:hover > .dropdown-menu {
+  display: inherit;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  top: 50px;
+  padding: 10px;
+  overflow: hidden;
+} */
+
+.hamburger-wrapper {
+  text-align: center;
+  width: 20%;
+}
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 998;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.nav-logo {
+  margin-right: 30px;
+  letter-spacing: 5px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-xs {
+  padding: 0;
+}
+
+.spacer {
+  width: 200px;
+}
