@@ -1,6 +1,15 @@
-<mat-sidenav-container [style.marginTop.px]="62">
+<mat-sidenav-container
+  [ngStyle.gt-xs]="{ marginTop: '62px' }"
+  [ngStyle.xs]="{ marginTop: '0px' }"
+>
   <mat-sidenav role="navigation" #sidenav>
-    <app-sidenav-list></app-sidenav-list>
+    <mat-nav-list>
+      <app-sidenav-list
+        *ngFor="let item of navList"
+        [item]="item"
+        (closeSidebar)="sidenav.close()"
+      ></app-sidenav-list>
+    </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <header><app-header (openSidebar)="sidenav.toggle()"></app-header></header>

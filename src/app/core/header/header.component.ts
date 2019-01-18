@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-header',
@@ -7,19 +8,10 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class HeaderComponent {
   @Output() openSidebar: EventEmitter<void> = new EventEmitter<void>();
-
-  services = [
-    'Bookkeeping',
-    'Sales Tax',
-    'Payroll Tax',
-    'Tax Returns',
-    'Government Notices',
-    'Lookback Services'
-  ];
-  resources = ['FAQs', 'Glossary', 'Blog', 'Tutorial'];
-  about = ['What We Do', 'Terms and Conditions', 'Privacy Policy'];
+  @ViewChild('menu') menu: MatIcon;
 
   onOpenSidebar() {
+    this.menu._elementRef.nativeElement.blur();
     this.openSidebar.emit();
   }
 }

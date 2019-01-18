@@ -15,6 +15,7 @@ body {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  height: 100%;
 }
 @media (min-width: 768px) {
   .app-wrapper {
@@ -30,6 +31,18 @@ body {
   .app-wrapper {
     width: 1170px;
   }
+}
+
+.accent-darker {
+  color: #c63d37 !important;
+}
+.accent-primary {
+  color: #ff6f61 !important;
+}
+
+.accent-primary-bold {
+  font-weight: bold !important;
+  color: #ff6f61 !important;
 }
 
 .white-text {
