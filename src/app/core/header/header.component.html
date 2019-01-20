@@ -1,16 +1,20 @@
-<mat-toolbar
-  color="primary"
-  class="nav-bar"
-  [ngClass.lt-md]="{ 'nav-xs': true }"
->
-  <div fxHide.gt-xs class="hamburger-wrapper">
+<mat-toolbar class="nav-bar" [ngClass.lt-sm]="{ 'nav-xs': true }">
+  <div class="hamburger-wrapper">
     <button mat-icon-button #menu (click)="onOpenSidebar()">
       <mat-icon>menu</mat-icon>
     </button>
   </div>
   <div fxHide.gt-xs class="spacer"></div>
-  <div><a routerLink="/" class="nav-logo">efortles</a></div>
-  <div fxFlex fxHide.xs>
+  <div class="responsive-logo">
+    <a routerLink="/" class="nav-logo">efortles</a>
+  </div>
+  <div
+    [ngClass.gt-md]="{
+      'responsive-nav-gt-md': true
+    }"
+    [ngClass.lt-lg]="{ 'responsive-nav-md': true }"
+    fxHide.xs
+  >
     <ul
       class="nav-list"
       fxLayoutGap="30px"

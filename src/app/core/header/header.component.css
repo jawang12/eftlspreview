@@ -6,11 +6,7 @@ mat-icon {
 mat-toolbar {
   height: 75px;
   padding: 0 6.7em;
-}
-
-:host {
-  padding-left: 20px;
-  padding-right: 20px;
+  background-color: rgba(125, 140, 155, 0.2);
 }
 
 a {
@@ -21,11 +17,6 @@ a {
 a:hover {
   color: lightgrey;
   cursor: pointer;
-}
-
-:host {
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .active-link,
@@ -50,6 +41,14 @@ a:hover {
 .hamburger-wrapper {
   text-align: center;
   width: 20%;
+}
+
+.mat-raised-button {
+  font-weight: 600;
+}
+
+button:hover {
+  color: dodgerblue;
 }
 
 .nav-bar {
@@ -77,6 +76,50 @@ a:hover {
 
 .nav-xs {
   padding: 0;
+}
+
+.responsive-nav-gt-md {
+  margin: 0 auto;
+  min-width: 0px;
+  flex: 1 1 100%;
+  box-sizing: border-box;
+  max-width: 1200px;
+}
+
+.responsive-nav-md {
+  flex: 1 1 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1101px) {
+  .hamburger-wrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  .responsive-nav-md {
+    display: none;
+  }
+  .responsive-logo {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+  .nav-logo {
+    margin: 0;
+  }
+  mat-toolbar {
+    padding-left: 0;
+  }
+}
+@media (max-width: 599px) {
+  .responsive-logo {
+    text-align: end;
+    padding-right: 20px;
+  }
+  .hamburger-wrapper {
+    padding-left: 20px;
+  }
 }
 
 .spacer {

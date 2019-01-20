@@ -1,7 +1,4 @@
-<mat-sidenav-container
-  [ngStyle.gt-xs]="{ marginTop: '62px' }"
-  [ngStyle.xs]="{ marginTop: '0px' }"
->
+<mat-sidenav-container>
   <mat-sidenav role="navigation" #sidenav>
     <mat-nav-list>
       <app-sidenav-list
@@ -13,6 +10,6 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <header><app-header (openSidebar)="sidenav.toggle()"></app-header></header>
-    <main class="app-wrapper"><router-outlet></router-outlet></main>
+    <main style="height: 100%"><router-outlet></router-outlet></main>
   </mat-sidenav-content>
 </mat-sidenav-container>
