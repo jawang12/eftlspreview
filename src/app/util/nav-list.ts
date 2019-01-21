@@ -10,27 +10,27 @@ export const navList: NavItem[] = [
     subList: [
       {
         name: 'Bookkeeping',
-        route: ''
+        route: '/features/bookkeeping'
       },
       {
         name: 'Sales Tax',
-        route: '/sales-tax'
+        route: '/features/sales-tax'
       },
       {
         name: 'Payroll Tax',
-        route: ''
+        route: '/features/payroll-tax'
       },
       {
         name: 'Tax Returns',
-        route: '/tax-returns'
+        route: '/features/tax-returns'
       },
       {
         name: 'Government Notices',
-        route: ''
+        route: '/features/government-notices'
       },
       {
         name: 'Lookback Services',
-        route: ''
+        route: '/features/lookback-services'
       }
     ]
   },

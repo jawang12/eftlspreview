@@ -21,7 +21,10 @@ export class SidenavListComponent implements OnInit {
     // pre expand the sub list
     let currentPath: string;
     if (window.location.pathname.length > 1) {
-      currentPath = window.location.pathname.match(/[a-z]+/g).join(' ');
+      currentPath = window.location.pathname
+        .match(/[a-z]+/g)
+        .slice(1)
+        .join(' ');
     }
     if (this.item.subList && currentPath) {
       const hasListName = this.item.subList.some(
