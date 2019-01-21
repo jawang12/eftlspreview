@@ -53,9 +53,6 @@ button:hover {
 
 .nav-bar {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   z-index: 998;
 }
 
@@ -106,12 +103,18 @@ button:hover {
     text-align: center;
   }
   .nav-logo {
-    margin: 0;
+    margin: auto;
   }
   mat-toolbar {
     padding-left: 0;
   }
 }
+@media (max-width: 740px) {
+  mat-toolbar {
+    padding-right: 4.5em;
+  }
+}
+
 @media (max-width: 599px) {
   .responsive-logo {
     text-align: end;
