@@ -1,0 +1,38 @@
+<a
+  mat-list-item
+  class="menu-list-item"
+  [ngClass]="{
+    'active-link accent-primary-bold': item.route
+      ? router.isActive(item.route, true)
+      : false
+  }"
+  (click)="onItemExpand()"
+>
+  {{ item.name }}
+  <span fxFlex fxLayoutAlign="end" *ngIf="item.subList?.length">
+    <mat-icon [@expandedState]="expanded ? 'expanded' : 'collapsed'">
+      expand_more
+    </mat-icon>
+  </span>
+</a>
+<div *ngIf="expanded" [@staggeredListState]="item.subList.length">
+  <mat-list-item
+    *ngFor="let subListItem of item.subList"
+    (click)="onCloseSidebar()"
+    [ngClass]="{
+      'active-link accent-primary-bold': subListItem.route
+        ? router.isActive(subListItem.route, true)
+        : false
+    }"
+  >
+    <a
+      [routerLink]="[subListItem.route]"
+      style="padding-left: 16px"
+      [ngStyle]="{
+        fontWeight: router.isActive(subListItem.route, true) ? '600' : '400'
+      }"
+      mat-line
+      >{{ subListItem.name }}</a
+    >
+  </mat-list-item>
+</div>
