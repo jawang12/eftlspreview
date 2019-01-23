@@ -1,1 +1,30 @@
-<div id="hero-wrapper"><div id="hero-overlay"></div></div>
+<section id="hero-wrapper">
+  <div id="hero-overlay" fxLayout="column" fxLayoutAlign="center center">
+    <div>
+      <h1
+        class="white-text"
+        [@fadeInDown]="!(interval % 2)"
+        [@fadeOutDown]="interval % 2"
+        style="font-size: 40px; margin: 15px"
+      >
+        {{ services[0] }}
+      </h1>
+    </div>
+    <div>
+      <h1 class="white-text">made <b id="effortless">effortless.</b></h1>
+    </div>
+    <div fxLayout="row" fxLayoutGap="40px">
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="openVideoModal()"
+        class="white-text video"
+      >
+        <mat-icon>ondemand_video</mat-icon> Our Objective
+      </button>
+      <button mat-raised-button color="accent" class="white-text start">
+        Let's Get Started
+      </button>
+    </div>
+  </div>
+</section>
