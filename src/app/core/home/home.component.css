@@ -3,6 +3,10 @@ h1 {
   font-family: Montserrat;
 }
 
+mat-dialog-container {
+  padding: 0;
+}
+
 #effortless {
   letter-spacing: 4px;
   color: #ffd4d0;

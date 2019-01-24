@@ -1,0 +1,70 @@
+<h1 class="title white-text" matDialogTitle>Schedule a Demo</h1>
+<div id="modal-wrapper">
+  <mat-dialog-content>
+    <form [formGroup]="form">
+      <mat-form-field appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="firstName" />
+        <mat-error *ngIf="isValid('firstName')">Required</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input matInput formControlName="lastName" />
+        <mat-error *ngIf="isValid('lastName')">Required</mat-error>
+      </mat-form-field>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" />
+          <mat-error *ngIf="isValid('email')">Invalid Email Address</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Phone Number</mat-label>
+          <input matInput formControlName="phoneNumber" />
+          <mat-error *ngIf="isValid('phoneNumber')"
+            >Invalid Phone Number</mat-error
+          >
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Company Name</mat-label>
+          <input matInput formControlName="companyName" />
+          <mat-error *ngIf="isValid('companyName')">Required</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Number of Employees</mat-label>
+          <input matInput formControlName="numberOfEmployees" />
+          <mat-error *ngIf="isValid('numberOfEmployees')"
+            >Invalid Number</mat-error
+          >
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field fxFlex appearance="outline">
+          <mat-label
+            >Please Tell Us More About What You're Looking For</mat-label
+          >
+          <textarea
+            matInput
+            maxlength="256"
+            formControlName="message"
+          ></textarea>
+          <mat-hint align="end">{{ getMessageLength() || 0 }}/256</mat-hint>
+        </mat-form-field>
+      </p>
+    </form>
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="center">
+    <button
+      [disabled]="form.invalid"
+      mat-raised-button
+      type="submit"
+      color="accent"
+      class="white-text"
+    >
+      Submit
+    </button>
+  </mat-dialog-actions>
+</div>

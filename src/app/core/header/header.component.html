@@ -29,7 +29,12 @@
     <ul class="nav-list" fxLayoutGap="30px" fxLayoutAlign="flex-end">
       <li><a routerLink="">Login</a></li>
       <li>
-        <button mat-raised-button color="accent" class="white-text">
+        <button
+          mat-raised-button
+          color="accent"
+          (click)="onOpenForm()"
+          class="white-text"
+        >
           Schedule a Demo
         </button>
       </li>

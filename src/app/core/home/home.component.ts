@@ -36,6 +36,8 @@ export class HomeComponent implements OnInit {
   }
 
   openVideoModal() {
-    this.dialog.open(VideoModalComponent);
+    this.dialog.open(VideoModalComponent, {
+      restoreFocus: false
+    });
   }
 }

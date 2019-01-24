@@ -43,6 +43,10 @@ body {
   color: #ff6f61 !important;
 }
 
+.form-modal .mat-dialog-container {
+  padding: 0 0 24px 0;
+}
+
 .white-text {
   color: white !important;
 }

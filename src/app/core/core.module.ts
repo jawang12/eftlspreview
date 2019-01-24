@@ -1,6 +1,8 @@
+import { DemoFormModalComponent } from './home/demo-form-modal-component';
 import { AppRoutingModule } from './../app-routing.module';
 import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
@@ -12,10 +14,11 @@ import { VideoModalComponent } from './home/video-modal.component';
     HomeComponent,
     HeaderComponent,
     SidenavListComponent,
-    VideoModalComponent
+    VideoModalComponent,
+    DemoFormModalComponent
   ],
-  imports: [SharedModule, AppRoutingModule],
+  imports: [SharedModule, AppRoutingModule, ReactiveFormsModule],
   exports: [HeaderComponent, SidenavListComponent, AppRoutingModule],
-  entryComponents: [VideoModalComponent]
+  entryComponents: [VideoModalComponent, DemoFormModalComponent]
 })
 export class CoreModule {}

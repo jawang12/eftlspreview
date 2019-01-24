@@ -1,3 +1,5 @@
+import { DemoFormModalComponent } from './../home/demo-form-modal-component';
+import { MatDialog } from '@angular/material/dialog';
 import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
 
@@ -10,8 +12,17 @@ export class HeaderComponent {
   @Output() openSidebar: EventEmitter<void> = new EventEmitter<void>();
   @ViewChild('menu') menu: MatIcon;
 
+  constructor(private dialog: MatDialog) {}
+
   onOpenSidebar() {
     this.menu._elementRef.nativeElement.blur();
     this.openSidebar.emit();
+  }
+
+  onOpenForm() {
+    this.dialog.open(DemoFormModalComponent, {
+      panelClass: 'form-modal',
+      restoreFocus: false
+    });
   }
 }
