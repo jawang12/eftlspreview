@@ -11,9 +11,8 @@ body {
 }
 
 .app-wrapper {
-  padding: 0 15px;
+  padding: 125px 15px;
   margin: 0 auto;
-  height: 100%;
 }
 @media (min-width: 768px) {
   .app-wrapper {
@@ -45,6 +44,14 @@ body {
 
 .form-modal .mat-dialog-container {
   padding: 0 0 24px 0;
+}
+
+.primary {
+  color: #7d8c9b;
+}
+
+.primary-dark {
+  color: #505f6d;
 }
 
 .white-text {

@@ -5,6 +5,8 @@ import {
   Validators,
   FormControl
 } from '@angular/forms';
+import { EmailService } from '../email.service';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-demo-form-modal',
@@ -14,7 +16,11 @@ import {
 export class DemoFormModalComponent implements OnInit {
   form: FormGroup;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private fb: FormBuilder,
+    private emailService: EmailService,
+    public dialogRef: MatDialogRef<DemoFormModalComponent>
+  ) {}
 
   ngOnInit() {
     this.formInit();
@@ -51,5 +57,38 @@ export class DemoFormModalComponent implements OnInit {
 
   onSubmit() {
     console.log(this.form);
+    const {
+      firstName,
+      lastName,
+      email,
+      phoneNumber,
+      companyName,
+      numberOfEmployees,
+      message
+    } = this.form.value;
+
+    const emailInfo = {
+      firstName,
+      lastName,
+      email,
+      phoneNumber,
+      companyName,
+      numberOfEmployees,
+      message
+    };
+
+    this.emailService
+      .sendContactEmail(emailInfo)
+      .toPromise()
+      .then(() => {
+        // add spinner here
+        setTimeout(() => {
+          this.dialogRef.close();
+        }, 1000);
+        console.log('success from angular');
+      })
+      .catch(error => {
+        console.log(error, 'err from angular');
+      });
   }
 }

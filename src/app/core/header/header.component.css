@@ -15,14 +15,14 @@ a {
 }
 
 a:hover {
-  color: lightgrey;
+  color: #ffd4d0;
   cursor: pointer;
 }
 
 .active-link,
 .active-link:active,
 .active-link:focus {
-  color: lightgrey;
+  color: #ffd4d0;
 }
 
 /* .nav-list li:hover > .dropdown-menu {
