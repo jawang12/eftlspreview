@@ -11,6 +11,9 @@ import { HeaderComponent } from './header/header.component';
 import { SidenavListComponent } from './sidenav-list/sidenav-list.component';
 import { VideoModalComponent } from './home/video-modal.component';
 import { AboutComponent } from './home/about/about.component';
+import { FeaturesComponent } from './home/features/features.component';
+import { FeatureComponent } from './home/features/feature/feature.component';
+import { TestimonialComponent } from './home/testimonial/testimonial.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { AboutComponent } from './home/about/about.component';
     SidenavListComponent,
     VideoModalComponent,
     DemoFormModalComponent,
-    AboutComponent
+    AboutComponent,
+    FeaturesComponent,
+    FeatureComponent,
+    TestimonialComponent
   ],
   imports: [
     SharedModule,

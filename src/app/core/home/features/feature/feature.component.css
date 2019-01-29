@@ -1,0 +1,21 @@
+p {
+  text-align: start;
+}
+
+.card {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.card-img {
+  max-height: 50px;
+  max-width: 50px;
+}
+
+.mat-card {
+  padding: 20px;
+}
+
+.mat-card:hover {
+  cursor: pointer;
+}

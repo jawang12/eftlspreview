@@ -1,3 +1,4 @@
+import { EmailInfo } from './../email.service';
 import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
@@ -78,7 +79,7 @@ export class DemoFormModalComponent implements OnInit {
     };
 
     this.emailService
-      .sendContactEmail(emailInfo)
+      .sendContactEmail(emailInfo as EmailInfo)
       .toPromise()
       .then(() => {
         // add spinner here

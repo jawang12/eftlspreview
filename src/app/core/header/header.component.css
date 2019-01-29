@@ -1,17 +1,18 @@
 mat-icon {
   font-size: 30px;
-  color: white;
 }
 
 mat-toolbar {
   height: 75px;
   padding: 0 6.7em;
-  background-color: rgba(125, 140, 155, 0.2);
+  background-color: transparent;
+  color: white;
+  transition: all 200ms ease-in-out;
+  /* background-color: rgba(125, 140, 155, 0.2); */
 }
 
 a {
   text-decoration: none;
-  color: white;
 }
 
 a:hover {
@@ -49,6 +50,10 @@ a:hover {
 
 .mat-raised-button:hover {
   background-color: #ff5c4f;
+}
+
+.mat-stroked-button {
+  font-weight: bold;
 }
 
 .nav-bar {
@@ -128,4 +133,10 @@ a:hover {
 
 .spacer {
   width: 200px;
+}
+
+.toolbar-scrolling {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #505f6d;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }

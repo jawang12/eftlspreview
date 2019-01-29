@@ -1,6 +1,12 @@
 import { DemoFormModalComponent } from './../home/demo-form-modal-component';
 import { MatDialog } from '@angular/material/dialog';
-import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Output,
+  ViewChild,
+  Input
+} from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
 
 @Component({
@@ -9,6 +15,7 @@ import { MatIcon } from '@angular/material/icon';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  @Input() isScrolling: boolean;
   @Output() openSidebar: EventEmitter<void> = new EventEmitter<void>();
   @ViewChild('menu') menu: MatIcon;
 

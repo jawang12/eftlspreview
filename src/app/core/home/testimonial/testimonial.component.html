@@ -1,0 +1,63 @@
+<section class="app-wrapper">
+  <div class="quotes-wrapper" fxLayout>
+    <div fxLayout="column" fxFlex="250px" class="logo-box">
+      <div
+        class="logo-quote"
+        [ngClass]="{ 'logo-active': currentTestimony === 'CRSE' }"
+      >
+        <p>CRSE SOLUTIONS, INC.</p>
+      </div>
+      <div
+        class="logo-quote"
+        [ngClass]="{ 'logo-active': currentTestimony === 'Sunrise' }"
+      >
+        <p>SUNRISE DIETARY CONSULTING GROUP</p>
+      </div>
+      <div
+        class="logo-quote"
+        [ngClass]="{ 'logo-active': currentTestimony === 'Best' }"
+      >
+        <p>BEST VALUE STORE LLC</p>
+      </div>
+    </div>
+    <div [ngSwitch]="currentTestimony">
+      <div class="quote crse-solutions" *ngSwitchCase="'CRSE'" @enter @leave>
+        <p>
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque
+          corrupti quia doloribus alias animi voluptas sint, quaerat maiores!
+          Eius voluptatibus iste voluptates mollitia quia rerum quisquam,
+          dolorem odit quibusdam perferendis."
+        </p>
+        <p class="quote-author"><b>Carla Rice</b>, CEO, CRSE Solutions, Inc.</p>
+      </div>
+      <div
+        class="quote sunrise-dietary"
+        *ngSwitchCase="'Sunrise'"
+        @enter
+        @leave
+      >
+        <p>
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Perspiciatis quasi a assumenda excepturi, explicabo fugiat quia
+          aspernatur molestias iste saepe repudiandae dolores minima animi amet
+          debitis minus maiores fuga delectus!"
+        </p>
+        <p class="quote-author">
+          <b>Heather Hughes</b>, CEO, Sunrise Dietary Consulting Group
+        </p>
+      </div>
+      <div class="quote best-value-store" *ngSwitchCase="'Best'" @enter @leave>
+        <p>
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+          repellendus corporis similique, illo pariatur ipsam, cupiditate
+          voluptas rem perferendis dignissimos unde earum iure voluptatibus
+          adipisci dicta officia cum ipsum tempora!"
+        </p>
+        <p class="quote-author">
+          <b>Carmen Stone</b>, CEO, Best Value Store LLC
+        </p>
+      </div>
+      <div *ngSwitchDefault></div>
+    </div>
+  </div>
+</section>

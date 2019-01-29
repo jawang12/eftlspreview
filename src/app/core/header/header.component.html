@@ -1,12 +1,23 @@
-<mat-toolbar class="nav-bar" [ngClass.lt-sm]="{ 'nav-xs': true }">
+<mat-toolbar
+  class="nav-bar"
+  [ngClass.lt-sm]="{ 'nav-xs': true }"
+  [ngClass]="{ 'toolbar-scrolling': isScrolling }"
+>
   <div class="hamburger-wrapper">
     <button mat-icon-button #menu (click)="onOpenSidebar()">
-      <mat-icon>menu</mat-icon>
+      <mat-icon [ngStyle]="{ color: isScrolling ? '#505f6d' : 'white' }"
+        >menu</mat-icon
+      >
     </button>
   </div>
   <div fxHide.gt-xs class="spacer"></div>
   <div class="responsive-logo">
-    <a routerLink="/" class="nav-logo">efortles</a>
+    <a
+      routerLink="/"
+      class="nav-logo"
+      [ngClass]="{ 'accent-primary': isScrolling }"
+      >efortles</a
+    >
   </div>
   <div
     [ngClass.gt-md]="{
@@ -27,7 +38,13 @@
       <li><a routerlink="">Blog</a></li>
     </ul>
     <ul class="nav-list" fxLayoutGap="30px" fxLayoutAlign="flex-end">
-      <li><a routerLink="">Login</a></li>
+      <li>
+        <a
+          routerLink=""
+          [ngStyle]="{ color: isScrolling ? '#505f6d' : 'white' }"
+          ><button mat-stroked-button>Login</button></a
+        >
+      </li>
       <li>
         <button
           mat-raised-button

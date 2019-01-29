@@ -1,4 +1,4 @@
-<mat-sidenav-container>
+<mat-sidenav-container cdkScrollable>
   <mat-sidenav role="navigation" #sidenav>
     <mat-nav-list>
       <app-sidenav-list
@@ -9,7 +9,12 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <header><app-header (openSidebar)="sidenav.toggle()"></app-header></header>
+    <header>
+      <app-header
+        [isScrolling]="isScrolling"
+        (openSidebar)="sidenav.toggle()"
+      ></app-header>
+    </header>
     <main style="height: 100%"><router-outlet></router-outlet></main>
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -1,0 +1,28 @@
+<section class="app-wrapper">
+  <h1 class="title primary-dark">
+    All Of Your Accounting Needs. <br style="line-height: 1.5" />One Simple
+    Platform.
+  </h1>
+  <div
+    fxLayout
+    fxLayout.lt-md="column"
+    fxLayoutGap="15px"
+    fxLayoutAlign="center"
+  >
+    <app-feature
+      [feature]="feature"
+      *ngFor="let feature of features.slice(0, 3)"
+    ></app-feature>
+  </div>
+  <div
+    fxLayout
+    fxLayout.lt-md="column"
+    fxLayoutGap="15px"
+    style="margin-top: 20px"
+  >
+    <app-feature
+      [feature]="feature"
+      *ngFor="let feature of features.slice(3)"
+    ></app-feature>
+  </div>
+</section>

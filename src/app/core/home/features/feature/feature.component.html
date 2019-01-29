@@ -1,0 +1,19 @@
+<mat-card
+  class="card"
+  [@pulse]="triggerPulse"
+  (mouseenter)="triggerPulse = true"
+  (mouseleave)="triggerPulse = false"
+>
+  <img class="card-img" src="../../../../../assets/money_bag.svg" alt="image" />
+  <h3>{{ feature.title }}</h3>
+  <mat-card-content>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed officiis,
+      sunt fugit perferendis eius id incidunt dicta omnis delectus illo debitis
+      beatae, deserunt reprehenderit cumque quas veritatis! Obcaecati, impedit
+      necessitatibus.
+    </p>
+  </mat-card-content>
+</mat-card>
+
+<!-- (mouseenter)="triggerPulse = triggerPulse === true ? false : true" -->

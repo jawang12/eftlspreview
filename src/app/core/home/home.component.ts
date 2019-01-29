@@ -14,12 +14,12 @@ export class HomeComponent implements OnInit {
     'Tax Returns',
     'Sales Tax',
     'Payroll Tax',
-    'Government Notices',
-    'Lookback Services',
+    'Compliance',
     'Accounting'
   ];
   interval = 0;
   timer: any;
+  animate = false;
 
   constructor(private dialog: MatDialog) {}
 
