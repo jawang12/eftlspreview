@@ -1,0 +1,51 @@
+h4 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+input,
+textarea,
+.call-us,
+.title-box {
+  font-family: Montserrat, "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+}
+
+textarea {
+  height: 196.3px;
+}
+
+button:hover {
+  background-color: #ff5c4f;
+}
+
+.call-us {
+  text-align: center;
+  font-size: 18px;
+}
+
+.demo-submit {
+  margin-top: 5px;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.form-wrapper {
+  margin-bottom: 50px;
+}
+
+.section4 {
+  width: 100%;
+  background: url("../../../../assets/clouds.png") no-repeat center center;
+  background-attachment: fixed;
+}
+
+.title-box {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.title {
+  font-size: 30px;
+}

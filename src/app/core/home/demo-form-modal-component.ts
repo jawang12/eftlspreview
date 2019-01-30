@@ -40,15 +40,12 @@ export class DemoFormModalComponent implements OnInit {
         )
       ]),
       companyName: ['', Validators.required],
-      numberOfEmployees: new FormControl('', [
-        Validators.required,
-        Validators.pattern(/^[1-9][0-9]*$/)
-      ]),
+      numberOfEmployees: ['', Validators.required],
       message: ['']
     });
   }
 
-  isValid(formControlName: string) {
+  isInvalid(formControlName: string) {
     return this.form.get(formControlName).invalid;
   }
 

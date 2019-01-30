@@ -14,6 +14,7 @@ import { AboutComponent } from './home/about/about.component';
 import { FeaturesComponent } from './home/features/features.component';
 import { FeatureComponent } from './home/features/feature/feature.component';
 import { TestimonialComponent } from './home/testimonial/testimonial.component';
+import { ScheduleDemoComponent } from './home/schedule-demo/schedule-demo.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { TestimonialComponent } from './home/testimonial/testimonial.component';
     AboutComponent,
     FeaturesComponent,
     FeatureComponent,
-    TestimonialComponent
+    TestimonialComponent,
+    ScheduleDemoComponent
   ],
   imports: [
     SharedModule,
