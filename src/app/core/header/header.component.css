@@ -77,10 +77,6 @@ a:hover {
   color: #d0e5ff;
 }
 
-.nav-xs {
-  padding: 0;
-}
-
 .responsive-nav-gt-md {
   margin: 0 auto;
   min-width: 0px;

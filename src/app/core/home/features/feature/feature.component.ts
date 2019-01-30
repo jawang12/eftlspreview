@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostListener } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Feature } from 'src/app/util/feature';
 import { pulseAnimation } from 'angular-animations';
 
@@ -8,12 +8,7 @@ import { pulseAnimation } from 'angular-animations';
   styleUrls: ['./feature.component.css'],
   animations: [pulseAnimation({ direction: '=>', duration: 500, scale: 1.06 })]
 })
-export class FeatureComponent implements OnInit {
+export class FeatureComponent {
   @Input() feature: Feature;
-
   triggerPulse = false;
-
-  constructor() {}
-
-  ngOnInit() {}
 }

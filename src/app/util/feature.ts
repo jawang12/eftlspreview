@@ -26,7 +26,7 @@ export const featuresList: Feature[] = [
   },
   {
     image: '',
-    title: 'Income Tax Preparation',
+    title: 'Income Tax Prep',
     description: '',
     route: ''
   },
