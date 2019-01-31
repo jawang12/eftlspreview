@@ -16,7 +16,8 @@ p {
   padding: 0;
 }
 .mat-raised-button {
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.7px;
   padding: 5px 20px;
 }
 

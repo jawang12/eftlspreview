@@ -19,7 +19,6 @@ export class HomeComponent implements OnInit {
   ];
   interval = 0;
   timer: any;
-  animate = false;
 
   constructor(private dialog: MatDialog) {}
 

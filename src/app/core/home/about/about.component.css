@@ -4,6 +4,11 @@ h3 {
   color: #6aaeff;
 }
 
+p {
+  line-height: 1.35714;
+  color: #505f6d;
+}
+
 .column-info {
   max-width: 500px;
 }

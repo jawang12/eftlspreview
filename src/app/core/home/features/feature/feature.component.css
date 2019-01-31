@@ -1,10 +1,16 @@
 p {
-  line-height: 28px;
+  line-height: 1.35714;
 }
 
 h3 {
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.6px;
+}
+
+hr {
+  width: 20%;
+  margin-bottom: 20px;
+  border: 1px dashed #f0d2ac;
 }
 
 .card {

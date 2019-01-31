@@ -15,6 +15,7 @@ import { FeaturesComponent } from './home/features/features.component';
 import { FeatureComponent } from './home/features/feature/feature.component';
 import { TestimonialComponent } from './home/testimonial/testimonial.component';
 import { ScheduleDemoComponent } from './home/schedule-demo/schedule-demo.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ScheduleDemoComponent } from './home/schedule-demo/schedule-demo.compon
     FeaturesComponent,
     FeatureComponent,
     TestimonialComponent,
-    ScheduleDemoComponent
+    ScheduleDemoComponent,
+    FooterComponent
   ],
   imports: [
     SharedModule,
@@ -35,7 +37,12 @@ import { ScheduleDemoComponent } from './home/schedule-demo/schedule-demo.compon
     ReactiveFormsModule,
     HttpClientModule
   ],
-  exports: [HeaderComponent, SidenavListComponent, AppRoutingModule],
+  exports: [
+    HeaderComponent,
+    SidenavListComponent,
+    FooterComponent,
+    AppRoutingModule
+  ],
   providers: [EmailService],
   entryComponents: [VideoModalComponent, DemoFormModalComponent]
 })

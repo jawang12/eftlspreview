@@ -44,16 +44,8 @@ a:hover {
   width: 20%;
 }
 
-.mat-raised-button {
-  font-weight: 600;
-}
-
 .mat-raised-button:hover {
   background-color: #ff5c4f;
-}
-
-.mat-stroked-button {
-  font-weight: bold;
 }
 
 .nav-bar {
@@ -65,8 +57,14 @@ a:hover {
   list-style: none;
   margin: 0;
   padding: 0;
-  font-weight: 600;
   font-size: 15px;
+}
+
+.nav-list,
+.mat-raised-button,
+.mat-stroked-button {
+  letter-spacing: 0.7px;
+  font-weight: 700;
 }
 
 .nav-logo {
