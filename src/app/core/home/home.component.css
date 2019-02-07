@@ -1,6 +1,8 @@
-h1 {
-  font-size: 30px;
-  font-family: Montserrat;
+h4 {
+  font-size: 24px;
+  font-family: Montserrat, "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  font-weight: normal;
 }
 
 mat-dialog-container {
@@ -10,6 +12,7 @@ mat-dialog-container {
 #effortless {
   letter-spacing: 4px;
   color: #ffd4d0;
+  margin-left: 4px;
   /* color: #deeeff; */
 }
 

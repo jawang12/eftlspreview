@@ -17,6 +17,7 @@ import { MatIcon } from '@angular/material/icon';
 export class HeaderComponent {
   @Input() isScrolling: boolean;
   @Output() openSidebar: EventEmitter<void> = new EventEmitter<void>();
+  @Output() scrollToFeatures: EventEmitter<void> = new EventEmitter<void>();
   @ViewChild('menu') menu: MatIcon;
 
   constructor(private dialog: MatDialog) {}
@@ -31,5 +32,9 @@ export class HeaderComponent {
       panelClass: 'form-modal',
       restoreFocus: false
     });
+  }
+
+  onScrollToFeatures() {
+    this.scrollToFeatures.emit();
   }
 }

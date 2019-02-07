@@ -1,3 +1,46 @@
-<p>
-  footer works!
-</p>
+<section class="footer-overlay">
+  <div class="app-wrapper footer">
+    <div fxLayout>
+      <div fxFlex="32%" fxLayout="column">
+        <h3>efortles</h3>
+        <p class="description">
+          The way compliance ought to be.<br style="line-height: 2" />
+          All inclusive virtual accounting services in the cloud.
+        </p>
+        <div fxFlex="auto" fxLayoutGap="10px" fxLayoutAlign="start end">
+          <a *ngFor="let social of socials" [href]="social.link">
+            <fa-icon [icon]="social.icon" size="lg"></fa-icon>
+          </a>
+        </div>
+      </div>
+      <div
+        fxFlex
+        fxLayout="column"
+        *ngFor="let category of categories; let i = index"
+      >
+        <h5>{{ category }}</h5>
+        <ul>
+          <li *ngFor="let item of listItems[i]">
+            <a [routerLink]="item.route">{{ item.title }}</a>
+          </li>
+        </ul>
+      </div>
+      <div fxFlex fxLayout="column">
+        <h5>Subscribe To Our Newsletter</h5>
+        <label class="mat-label" for="email">Email</label>
+        <input matInput class="input" [formControl]="email" />
+        <mat-error *ngIf="isInvalidEmail"
+          >Please Enter A Valid Email Address</mat-error
+        >
+        <button mat-stroked-button (click)="onSubmit()">Subscribe</button>
+      </div>
+    </div>
+    <div class="subFooter">
+      <span class="copyright">© 2019 Efortles</span>
+      <span>
+        <a class="copyright">Terms of Use</a>
+        <a class="copyright">Privacy and Security Statement</a>
+      </span>
+    </div>
+  </div>
+</section>

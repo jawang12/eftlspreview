@@ -1,0 +1,135 @@
+a {
+  text-decoration: none;
+  opacity: 0.4;
+  color: white;
+  transition: opacity 300ms ease-in;
+  cursor: pointer;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+h3,
+h5,
+a,
+.description {
+  color: white;
+}
+
+h3,
+h5 {
+  margin-bottom: 14px;
+}
+
+h3 {
+  letter-spacing: 5px;
+}
+
+h5 {
+  color: white;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+}
+
+li {
+  padding: 5px 5px 5px 0;
+}
+
+span,
+span > a {
+  margin-right: 15px;
+}
+
+.mat-form-field,
+.mat-label {
+  font-size: 12px;
+  color: white;
+  opacity: 0.6;
+}
+
+.input {
+  border: 1px solid white;
+  opacity: 0.4;
+  padding: 10px;
+  border-radius: 4px;
+  color: white;
+  box-sizing: inherit;
+  margin: 5px 0;
+  font-size: 12px;
+  min-width: 64px;
+  transition: opacity 300ms ease-in;
+}
+
+.input:hover,
+.input:focus {
+  opacity: 1;
+}
+
+.mat-error {
+  font-size: 60%;
+  letter-spacing: 0.4px;
+  opacity: 0.7;
+}
+
+.mat-stroked-button {
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  color: white;
+  opacity: 0.4;
+  transition: opacity 300ms ease-in;
+  border-color: white;
+  margin-top: 10px;
+}
+
+.mat-stroked-button:hover {
+  opacity: 1;
+}
+
+.mat-form-field:hover {
+  color: white;
+}
+
+.description {
+  opacity: 0.4;
+  font-size: 13px;
+}
+.footer {
+  padding-bottom: 50px;
+}
+
+.footer-overlay {
+  background: #536976; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #292e49,
+    #536976
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #292e49,
+    #536976
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.subFooter {
+  margin-top: 10em;
+  font-family: Montserrat, "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.copyright {
+  color: white;
+  opacity: 0.2;
+}

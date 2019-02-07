@@ -5,6 +5,7 @@ import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
@@ -35,7 +36,8 @@ import { FooterComponent } from './footer/footer.component';
     SharedModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   exports: [
     HeaderComponent,

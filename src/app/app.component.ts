@@ -5,9 +5,9 @@ import {
   map,
   throttleTime,
   pairwise,
-  distinctUntilChanged
+  distinctUntilChanged,
+  take
 } from 'rxjs/operators';
-import { Scroll } from '@angular/router';
 
 enum NavBarStatus {
   SCROLLING = 'scrolling',
@@ -28,7 +28,7 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    const scroll$ = this.scrollDispatcher
+    this.scrollDispatcher
       .scrolled()
       .pipe(
         throttleTime(10),
@@ -65,4 +65,6 @@ export class AppComponent implements OnInit {
         );
       });
   }
+
+  scrollToFeatures() {}
 }
