@@ -13,17 +13,20 @@ mat-toolbar {
 
 a {
   text-decoration: none;
+  transition: opacity 300ms ease-in;
 }
 
 a:hover {
-  color: #ffd4d0;
+  color: #fcc0ba;
   cursor: pointer;
+  opacity: 1;
 }
 
 .active-link,
 .active-link:active,
 .active-link:focus {
-  color: #ffd4d0;
+  color: #fcc0ba;
+  opacity: 1;
 }
 
 /* .nav-list li:hover > .dropdown-menu {
